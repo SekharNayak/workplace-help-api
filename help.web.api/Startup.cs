@@ -12,7 +12,9 @@ namespace help.web.api
     {
         public void Configuration(IAppBuilder app)
         {
+           // app.Run( context => context.Response.WriteAsync("kukura gandi"));
 
+            
         }
     }
 }

@@ -4,11 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using help.api.models;
+using help.api.repositories;
 
 namespace help.api.services.IssueTracking
 {
     public class IssueService : IIssueService
     {
+
+        private IIssueRepository issueRepositories;
+
+        public IssueService(IIssueRepository issueRepository )
+        {
+            this.issueRepositories = issueRepository;
+        }
         public Task CreateIssueAsync(Issue issue)
         {
             return Task.FromResult<bool>(true);
@@ -21,7 +29,9 @@ namespace help.api.services.IssueTracking
 
         public Task<IEnumerable<Issue>> GetAllIssuesAsync()
         {
-            return Task.Run<IEnumerable<Issue>>(() => { return new List<Issue>(); });
+            return Task.Run<IEnumerable<Issue>>(() => {
+                return issueRepositories.Get();
+            });
         }
 
         public Task<Issue> GetIssueByIdAsync(int id)

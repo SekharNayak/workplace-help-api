@@ -242,6 +242,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IssueController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Custom\CustomFilter.cs" />
+    <Compile Include="Custom\OnlyAjaxRequest.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -307,9 +310,17 @@
       <Project>{2e5675be-3350-4ec3-861e-1f0d221bdaca}</Project>
       <Name>help.api.models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\help.api.repositories\help.api.repositories.csproj">
+      <Project>{ff1b55ac-f743-44ae-a3b4-84d910549bf5}</Project>
+      <Name>help.api.repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\help.api.services\help.api.services.csproj">
       <Project>{2e09c73b-4ee2-4fdd-82bc-88bfe97733cb}</Project>
       <Name>help.api.services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\help.db\help.db.csproj">
+      <Project>{270bb20b-4217-44e7-90f0-2ca549892969}</Project>
+      <Name>help.db</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

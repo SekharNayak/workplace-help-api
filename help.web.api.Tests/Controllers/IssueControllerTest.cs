@@ -1,31 +1,28 @@
 ﻿using help.api.models;
 using help.api.services.IssueTracking;
 using help.web.api.Controllers;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using NUnit.Framework;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Web.Http;
-using System.Web.Http.Results;
 
 namespace help.web.api.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class IssueControllerTest
     {
 
         private Moq.Mock<IIssueService> issueService;
         private IssueController controller;
-        [TestInitialize]
+
+
+        [SetUp]
         public void Initialize() {
         
             issueService = new Moq.Mock<IIssueService>();
             controller = new IssueController(issueService.Object);
         }
 
-        [TestMethod]
+        [Test]
         public void GetIssues() {
            
             issueService.Setup(service => service.GetAllIssuesAsync()).
@@ -34,7 +31,7 @@ namespace help.web.api.Tests.Controllers
             Assert.IsNotNull(allissues);                   
         }
 
-        [TestCleanup]
+        [TearDown]
         public void CleanUp() {
             issueService = null;
             controller.Dispose();

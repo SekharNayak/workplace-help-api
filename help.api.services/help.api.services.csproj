@@ -43,12 +43,18 @@
     <Compile Include="IssueTracking\IIssueService.cs" />
     <Compile Include="IssueTracking\IssueService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Status\IStatusService.cs" />
+    <Compile Include="Status\StatusService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\help.api.models\help.api.models.csproj">
       <Project>{2e5675be-3350-4ec3-861e-1f0d221bdaca}</Project>
       <Name>help.api.models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\help.api.repositories\help.api.repositories.csproj">
+      <Project>{ff1b55ac-f743-44ae-a3b4-84d910549bf5}</Project>
+      <Name>help.api.repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

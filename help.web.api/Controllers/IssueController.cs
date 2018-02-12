@@ -22,5 +22,12 @@ namespace help.web.api.Controllers
             return await issueService.GetAllIssuesAsync();
             
         }
+        
+        public Task<IHttpActionResult> GetIssuesById(int id) {
+            
+            return Task.FromResult<IHttpActionResult>(Ok(""));
+
+        }
+        
     }
 }
