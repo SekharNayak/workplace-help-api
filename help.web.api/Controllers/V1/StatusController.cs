@@ -8,9 +8,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace help.web.api.Controllers
+namespace help.web.api.Controllers.V1
 {
-    [RoutePrefix("api/status")]
+    [RoutePrefix("api/V1/status")]
     public class StatusController : ApiController
     {
 
@@ -23,8 +23,12 @@ namespace help.web.api.Controllers
         [Route("")]
         [HttpGet]
         public async Task<IEnumerable<Status>> GetStatuses() {
+
+           
             return await statusService.GetStatuses();
 
         }
+
+        
     }
 }

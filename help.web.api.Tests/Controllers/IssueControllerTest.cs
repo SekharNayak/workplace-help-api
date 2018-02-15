@@ -1,6 +1,7 @@
 ﻿using help.api.models;
 using help.api.services.IssueTracking;
 using help.web.api.Controllers;
+using help.web.api.Controllers.V1;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Threading.Tasks;

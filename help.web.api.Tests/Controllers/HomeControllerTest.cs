@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using help.web.api;
 using help.web.api.Controllers;
+using help.web.api.Controllers.V1;
 
 namespace help.web.api.Tests.Controllers
 {

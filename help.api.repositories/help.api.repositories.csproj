@@ -54,8 +54,10 @@
     <Compile Include="IRepository.cs" />
     <Compile Include="IssueRepository.cs" />
     <Compile Include="IStatusRepository.cs" />
+    <Compile Include="ITeamRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatusRepository.cs" />
+    <Compile Include="TeamRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

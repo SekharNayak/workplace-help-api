@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace help.web.api.Controllers
+namespace help.web.api.Controllers.V1
 {
-    [RoutePrefix("api/issue")]
+    [RoutePrefix("api/V1/issue")]
     public class IssueController : ApiController
     {
         private readonly IIssueService issueService;
@@ -20,7 +20,6 @@ namespace help.web.api.Controllers
         public async Task<IEnumerable<Issue>> GetIssues() {
 
             return await issueService.GetAllIssuesAsync();
-            
         }
         
         public Task<IHttpActionResult> GetIssuesById(int id) {

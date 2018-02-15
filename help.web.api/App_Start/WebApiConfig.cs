@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using System.Web.Http.Dispatcher;
+using help.web.api.Infra;
 
 namespace help.web.api
 {
@@ -25,6 +27,9 @@ namespace help.web.api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+           // only if you are using conventional routing .
+           // config.Services.Replace(typeof(IHttpControllerSelector), new HelpApiHttpControllerSelector(config));
         }
     }
 }

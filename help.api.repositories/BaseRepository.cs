@@ -10,7 +10,7 @@ namespace help.api.repositories
     public abstract class BaseRepository<T> : IRepository<T> , IDisposable
         where T : class
     {
-       private readonly DbContext dbContext;
+       protected readonly DbContext dbContext;
         protected BaseRepository(DbContext dbContext )
         {
             this.dbContext = dbContext;
