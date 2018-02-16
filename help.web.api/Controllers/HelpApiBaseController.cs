@@ -16,5 +16,7 @@ namespace help.web.api.Controllers
             HelpApiExceptionType excType , HttpStatusCode statusCode = HttpStatusCode.InternalServerError) {
             return new HelpApiExceptionResult<Terror>(data,excType,statusCode);
         }
+
+
     }
 }

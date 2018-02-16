@@ -7,6 +7,8 @@ using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Dispatcher;
 using help.web.api.Infra;
+using System.Web.Http.ExceptionHandling;
+using help.web.api.Infra.Error;
 
 namespace help.web.api
 {
@@ -28,8 +30,12 @@ namespace help.web.api
                 defaults: new { id = RouteParameter.Optional }
             );
 
-           // only if you are using conventional routing .
-           // config.Services.Replace(typeof(IHttpControllerSelector), new HelpApiHttpControllerSelector(config));
+            // only if you are using conventional routing .
+            // config.Services.Replace(typeof(IHttpControllerSelector), new HelpApiHttpControllerSelector(config));
+
+
+            //to add custom exception logging .
+            //config.Services.Replace(typeof(IExceptionLogger), new HelpApiExceptionLogger());
         }
     }
 }
